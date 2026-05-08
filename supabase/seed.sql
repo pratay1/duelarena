@@ -1,0 +1,111 @@
+-- Sample trivia questions for testing
+-- General Knowledge (category id: 11111111-1111-1111-1111-111111111111)
+
+-- Question 1
+insert into trivia_questions (id, category_id, question_text) values
+  ('q1111111-1111-1111-1111-111111111111', '11111111-1111-1111-1111-111111111111', 'What is the capital of France?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a111111a-1111-1111-1111-111111111111', 'q1111111-1111-1111-1111-111111111111', 'London', false),
+  ('a111111b-1111-1111-1111-111111111111', 'q1111111-1111-1111-1111-111111111111', 'Paris', true),
+  ('a111111c-1111-1111-1111-111111111111', 'q1111111-1111-1111-1111-111111111111', 'Berlin', false),
+  ('a111111d-1111-1111-1111-111111111111', 'q1111111-1111-1111-1111-111111111111', 'Madrid', false);
+
+update trivia_questions set correct_answer_id = 'a111111b-1111-1111-1111-111111111111' 
+where id = 'q1111111-1111-1111-1111-111111111111';
+
+-- Question 2
+insert into trivia_questions (id, category_id, question_text) values
+  ('q2222222-2222-2222-2222-222222222222', '11111111-1111-1111-1111-111111111111', 'Which planet is known as the Red Planet?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a222222a-2222-2222-2222-222222222222', 'q2222222-2222-2222-2222-222222222222', 'Venus', false),
+  ('a222222b-2222-2222-2222-222222222222', 'q2222222-2222-2222-2222-222222222222', 'Jupiter', false),
+  ('a222222c-2222-2222-2222-222222222222', 'q2222222-2222-2222-2222-222222222222', 'Mars', true),
+  ('a222222d-2222-2222-2222-222222222222', 'q2222222-2222-2222-2222-222222222222', 'Saturn', false);
+
+update trivia_questions set correct_answer_id = 'a222222c-2222-2222-2222-222222222222' 
+where id = 'q2222222-2222-2222-2222-222222222222';
+
+-- Question 3
+insert into trivia_questions (id, category_id, question_text) values
+  ('q3333333-3333-3333-3333-333333333333', '11111111-1111-1111-1111-111111111111', 'Who painted the Mona Lisa?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a333333a-3333-3333-3333-333333333333', 'q3333333-3333-3333-3333-333333333333', 'Vincent van Gogh', false),
+  ('a333333b-3333-3333-3333-333333333333', 'q3333333-3333-3333-3333-333333333333', 'Pablo Picasso', false),
+  ('a333333c-3333-3333-3333-333333333333', 'q3333333-3333-3333-3333-333333333333', 'Leonardo da Vinci', true),
+  ('a333333d-3333-3333-3333-333333333333', 'q3333333-3333-3333-3333-333333333333', 'Michelangelo', false);
+
+update trivia_questions set correct_answer_id = 'a333333c-3333-3333-3333-333333333333' 
+where id = 'q3333333-3333-3333-3333-333333333333';
+
+-- Science (category id: 22222222-2222-2222-2222-222222222222)
+
+insert into trivia_questions (id, category_id, question_text) values
+  ('q4444444-4444-4444-4444-444444444444', '22222222-2222-2222-2222-222222222222', 'What is the chemical symbol for gold?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a444444a-4444-4444-4444-444444444444', 'q4444444-4444-4444-4444-444444444444', 'Go', false),
+  ('a444444b-4444-4444-4444-444444444444', 'q4444444-4444-4444-4444-444444444444', 'Au', true),
+  ('a444444c-4444-4444-4444-444444444444', 'q4444444-4444-4444-4444-444444444444', 'Ag', false),
+  ('a444444d-4444-4444-4444-444444444444', 'q4444444-4444-4444-4444-444444444444', 'Gd', false);
+
+update trivia_questions set correct_answer_id = 'a444444b-4444-4444-4444-444444444444' 
+where id = 'q4444444-4444-4444-4444-444444444444';
+
+-- History (category id: 33333333-3333-3333-3333-333333333333)
+
+insert into trivia_questions (id, category_id, question_text) values
+  ('q5555555-5555-5555-5555-555555555555', '33333333-3333-3333-3333-333333333333', 'In what year did World War II end?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a555555a-5555-5555-5555-555555555555', 'q5555555-5555-5555-5555-555555555555', '1943', false),
+  ('a555555b-5555-5555-5555-555555555555', 'q5555555-5555-5555-5555-555555555555', '1944', false),
+  ('a555555c-5555-5555-5555-555555555555', 'q5555555-5555-5555-5555-555555555555', '1945', true),
+  ('a555555d-5555-5555-5555-555555555555', 'q5555555-5555-5555-5555-555555555555', '1946', false);
+
+update trivia_questions set correct_answer_id = 'a555555c-5555-5555-5555-555555555555' 
+where id = 'q5555555-5555-5555-5555-555555555555';
+
+-- Pop Culture (category id: 44444444-4444-4444-4444-444444444444)
+
+insert into trivia_questions (id, category_id, question_text) values
+  ('q6666666-6666-6666-6666-666666666666', '44444444-4444-4444-4444-444444444444', 'Which movie won the first Academy Award for Best Picture?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a666666a-6666-6666-6666-666666666666', 'q6666666-6666-6666-6666-666666666666', 'Wings', true),
+  ('a666666b-6666-6666-6666-666666666666', 'q6666666-6666-6666-6666-666666666666', 'Sunrise', false),
+  ('a666666c-6666-6666-6666-666666666666', 'q6666666-6666-6666-6666-666666666666', 'The Jazz Singer', false),
+  ('a666666d-6666-6666-6666-666666666666', 'q6666666-6666-6666-6666-666666666666', '7th Heaven', false);
+
+update trivia_questions set correct_answer_id = 'a666666a-6666-6666-6666-666666666666' 
+where id = 'q6666666-6666-6666-6666-666666666666';
+
+-- Technology (category id: 55555555-5555-5555-5555-555555555555)
+
+insert into trivia_questions (id, category_id, question_text) values
+  ('q7777777-7777-7777-7777-777777777777', '55555555-5555-5555-5555-555555555555', 'Who founded Microsoft?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a777777a-7777-7777-7777-777777777777', 'q7777777-7777-7777-7777-777777777777', 'Steve Jobs', false),
+  ('a777777b-7777-7777-7777-777777777777', 'q7777777-7777-7777-7777-777777777777', 'Bill Gates', true),
+  ('a777777c-7777-7777-7777-777777777777', 'q7777777-7777-7777-7777-777777777777', 'Mark Zuckerberg', false),
+  ('a777777d-7777-7777-7777-777777777777', 'q7777777-7777-7777-7777-777777777777', 'Elon Musk', false);
+
+update trivia_questions set correct_answer_id = 'a777777b-7777-7777-7777-777777777777' 
+where id = 'q7777777-7777-7777-7777-777777777777';
+
+-- Sports (category id: 66666666-6666-6666-6666-666666666666)
+
+insert into trivia_questions (id, category_id, question_text) values
+  ('q8888888-8888-8888-8888-888888888888', '66666666-6666-6666-6666-666666666666', 'How many players are on a basketball team on the court?');
+
+insert into answers (id, question_id, answer_text, is_correct) values
+  ('a888888a-8888-8888-8888-888888888888', 'q8888888-8888-8888-8888-888888888888', '4', false),
+  ('a888888b-8888-8888-8888-888888888888', 'q8888888-8888-8888-8888-888888888888', '5', true),
+  ('a888888c-8888-8888-8888-888888888888', 'q8888888-8888-8888-8888-888888888888', '6', false),
+  ('a888888d-8888-8888-8888-888888888888', 'q8888888-8888-8888-8888-888888888888', '7', false);
+
+update trivia_questions set correct_answer_id = 'a888888b-8888-8888-8888-888888888888' 
+where id = 'q8888888-8888-8888-8888-888888888888';
