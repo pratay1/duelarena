@@ -197,32 +197,30 @@ export function LobbyPage() {
                 <div className="flex items-center justify-between p-3 glass rounded">
                   <div className="flex items-center gap-3">
                     <Users size={16} className="text-gray-400" />
-                    <span className="text-sm font-mono">Win Rate</span>
+                    <span className="text-sm font-mono">Tokens</span>
                   </div>
                   <span className="text-accent font-mono text-sm">
-                    {profile && profile.wins + profile.losses > 0
-                      ? Math.round((profile.wins / (profile.wins + profile.losses)) * 100)
-                      : 0}%
+                    {profile?.tokens || 100}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between p-3 glass rounded">
                   <div className="flex items-center gap-3">
                     <Target size={16} className="text-gray-400" />
-                    <span className="text-sm font-mono">ELO Rating</span>
+                    <span className="text-sm font-mono">Points</span>
                   </div>
                   <span className="text-accent font-mono text-sm font-bold">
-                    {profile?.elo || 1000}
+                    {profile?.points || 0}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between p-3 glass rounded">
                   <div className="flex items-center gap-3">
                     <Clock size={16} className="text-gray-400" />
-                    <span className="text-sm font-mono">Total Battles</span>
+                    <span className="text-sm font-mono">Games Played</span>
                   </div>
                   <span className="text-white font-mono text-sm font-bold">
-                    {profile ? profile.wins + profile.losses : 0}
+                    {profile?.games_played || 0}
                   </span>
                 </div>
               </div>

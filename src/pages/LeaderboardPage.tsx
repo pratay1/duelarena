@@ -102,13 +102,11 @@ export function LeaderboardPage() {
                   <span className="font-mono text-sm">{profile.username}</span>
                 </div>
                 <div className="col-span-2 flex items-center justify-center font-mono text-xs text-gray-400">
-                  <span className="text-green-400">{profile.wins}</span>
-                  <span className="mx-1">-</span>
-                  <span className="text-red-400">{profile.losses}</span>
+                  <span className="text-green-400">{profile.games_played}</span>
                 </div>
                 <div className="col-span-2 flex items-center justify-end">
                   <span className={`font-mono text-sm font-bold ${index < 3 ? 'text-accent' : 'text-white'}`}>
-                    {profile.elo}
+                    {profile.points}
                   </span>
                 </div>
               </motion.div>

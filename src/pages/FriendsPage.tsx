@@ -162,7 +162,7 @@ export function FriendsPage() {
                         </div>
                         <div>
                           <p className="font-mono text-sm">{user.username}</p>
-                          <p className="font-mono text-xs text-gray-400">●{user.elo}</p>
+                          <p className="font-mono text-xs text-gray-400">●{user.points}</p>
                         </div>
                       </div>
                       <Button size="sm" onClick={() => sendFriendRequest(user.id)}>
@@ -206,7 +206,7 @@ export function FriendsPage() {
                         <div>
                           <p className="font-mono text-sm">{friend.username}</p>
                           <p className="font-mono text-xs text-gray-400">
-                            {friend.wins}W - {friend.losses}L
+                            {friend.games_played} games
                           </p>
                         </div>
                       </div>
